@@ -9,6 +9,7 @@
    4. [Encuestas/Valoraciones interactivas](#encuestasvaloraciones-interactivas)
    5. [Cambios de estilo](#cambios-de-estilo)
    6. [Imágenes](#imágenes)
+   7. [Dado](#Dado-descuento)
 4. [Tecnologías utilizadas](#tecnologías-utilizadas)
 5. [Comentarios adicionales](#comentarios-adicionales)
 6. [Scripts Enteros](#scripts-enteros)
@@ -86,13 +87,13 @@ La primera gestiona la visualización de contenido en tarjetas interactivas, per
 ![expandirContraerTarjetas](./acatalan_acarpio_b2responsive-main/Documentacion/expandirContraerTarjetas.gif)
 ### Función términos y condiciones
 La segunda función crea un pop-up con términos y condiciones que los usuarios pueden aceptar o cancelar; si se aceptan, el pop-up se oculta y la aceptación se guarda en el almacenamiento local. 
-![mostrarOcultarPopup](./acatalan_acarpio_b2responsive-main/Documentacion/mostrarOcultarPopup.gif)
+![mostrarOcultarPopup](./Documentacion/mostrarOcultarPopup.gif)
 
 ## Notificaciones emergentes
 
 Implementamos un sistema de notificaciones emergentes para informar a los usuarios sobre eventos importantes en tiempo real. El sistema utiliza un contenedor `div` para mostrar las notificaciones y un botón con un icono de campana que permite a los usuarios mostrar u ocultar las notificaciones.
 
-![Notificaciones-emergentes](./acatalan_acarpio_b2responsive-main/Documentacion/Notificaciones-emergentes.gif)
+![Notificaciones-emergentes](./Documentacion/Notificaciones-emergentes.gif)
 
 ### Cómo Funciona
 
@@ -107,7 +108,7 @@ Implementamos un sistema de notificaciones emergentes para informar a los usuari
 ### Notificación de Cookies
 
 CAMBIAR -- Además, implementamos una notificación de cookies que informa a los usuarios sobre nuestra política de cookies y obtiene su consentimiento. Esta notificación solo se muestra una vez y se oculta permanentemente una vez que el usuario interactúa con ella.
-![Cookies-Banner](./acatalan_acarpio_b2responsive-main/Documentacion/Cookies-Banner.png)
+![Cookies-Banner](./Documentacion/Cookies-Banner.png)
 
 #### Cómo Funciona
 
@@ -122,7 +123,7 @@ En este apartado, hay una encuesta al final de la página contactos, que recibe 
 
 Como añadido, los comentarios del formulario de la misma página se agregan de manera dinámica una vez se envían.
 
-![Valoraciones-Interactivas](./acatalan_acarpio_b2responsive-main/Documentacion/Valoraciones-Interactivas.gif)
+![Valoraciones-Interactivas](./Documentacion/Valoraciones-Interactivas.gif)
 
 ### Cómo Funciona
 
@@ -143,11 +144,18 @@ Todas
 
 En cada página, en el navbar se ha añadido un botón que se llama "Temas" que cambia entre el tema claro, que es el que se tiene por defecto, y el tema oscuro. El script tiene dos cambios de estilo diferentes. Uno que simplemente añade y quita una clase con toggle, para pasar del modo oscuro al modo claro y viceversa, en las páginas más simples, y otra función para las partes más complicadas, como las de "Nosotros" o "Contacto" que utiliza selectores de elementos de JS y el array que generan para cambiar los estilos.
 
+También hemos añadido esos cambios de estilo a los popups de cookies y terminos y condiciones.
+
 ## Funcionalidad de la página:
 
 
 
 https://github.com/CarpioAlex/WebV2/assets/147094237/757db03c-6fc8-490f-8303-52a4eec72ffd
+
+
+
+https://github.com/CarpioAlex/acatalan_acarpio_PracticaB2Javascript/assets/147094237/0079dbbb-4cdb-4c64-af0c-38d42bbaa6b0
+
 
 
 
@@ -173,6 +181,13 @@ Estos elementos en un principio no existen en la web, si no que se crean con cre
 
 https://github.com/CarpioAlex/WebV2/assets/147094237/8bcf693c-4dc0-4d50-bda9-3ddd5a987a7c
 
+### Dado descuento
+
+Hemos aprovechado el script de la Tasca 4 de crear un dado para añadirlo a la página como extra. En la página "Tienda" hay un botón llamado Dado, que llama a las funciones correspondientes, y crea un dado que empieza a girar, según lo que saque ese dado después se aplica un descuento a los precios de la página. Este script combina varias categorías, ya que el dado se añade de forma dinámica a la web, y muestra diferentes pop ups. (Este no lo hemos comentado porque es un extra y lo hemos hecho para programar un poco.)
+
+
+
+https://github.com/CarpioAlex/acatalan_acarpio_PracticaB2Javascript/assets/147094237/5ccef694-81a5-4a6f-94b7-9921f3a0e5fa
 
 
 
