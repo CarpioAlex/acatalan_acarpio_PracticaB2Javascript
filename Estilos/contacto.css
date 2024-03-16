@@ -1,0 +1,229 @@
+
+/*CSS Generales */
+
+body, html {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+}
+
+input[type="text"], input[type="email"], textarea, input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    max-width: 550px;
+}
+
+h1 {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 2em;
+}
+
+
+input[type="radio"] {
+    margin: 10px 10px 2px;
+    
+}
+
+label {
+    margin-bottom: 5px;
+    margin-top: 20px;
+    display: block;
+}
+
+input[type="submit"], input[type="button"] {
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #007d6a;
+}
+
+/* Oculta leyenda */
+#leyenda {
+    display: none;
+}
+
+.bien {
+    color: green;
+}
+
+.mal {
+    color: red;
+    
+}
+
+
+  .contenedorContraseña {
+    display: flex;
+    flex-direction: column;
+}
+
+#leyenda {
+    text-align: center;
+    font-size: 1.67em;
+}
+
+
+#lista-comentarios .comentario {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  }
+  
+  #lista-comentarios .comentario:first-child {
+    padding-top: 0;
+  }
+  
+  #lista-comentarios .comentario:last-child {
+    border-bottom: none;
+  }
+  
+#icono-tarjeta i {
+    font-size: 4em;
+    text-align: center;
+}
+
+#seccion-comentarios {
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 2em;
+  }
+  
+  .comentario {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .foto-perfil {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+  
+  .texto-comentario {
+    flex-grow: 1;
+  }
+  #valoracion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ventanaOculta {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.ventanaCentrada {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+    width: 80%; 
+    max-width: 500px;
+}
+
+
+
+#comentario {
+    resize: none;
+    width: 80%;
+    box-sizing: content-box;
+}
+
+#estrellas i {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 2em; 
+}
+
+#estrellas i:hover,
+#estrellas i:hover ~ i {
+    color: #ccc; }
+
+#estrellas i:hover ~ i,
+#estrellas i:hover {
+    color: #ff0;
+}
+
+
+
+@media screen and (max-width: 400px) {
+    form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    input[type="text"], input[type="email"], textarea, select {
+        width: 100%;
+        max-width: none;
+    }
+
+    input[type="radio"] {
+        margin: 5px 10px 2px;
+    }
+
+    input[type="submit"] {
+        padding: 5px 10px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    input[type="text"], input[type="email"], textarea, select {
+        width: 100%;
+        max-width: none;
+    }
+
+    input[type="radio"] {
+        margin: 5px 10px 2px;
+    }
+
+    input[type="submit"] {
+        padding: 5px 10px;
+    }
+
+    #seccion-comentarios {
+        padding: 10px;
+      }
+}

@@ -1,0 +1,205 @@
+/* Esta clase se aplica a un elemento que muestra una imagen de fondo con el texto "Airsoft Mallorca, la empresa líder de Airsoft" centrado */
+.indice__lideres {
+    /* El alto y el ancho del elemento se ajustan al contenido */
+    height: auto;
+    width: auto;
+    /* La imagen de fondo */
+    background-image: url("../Recursos/Imagenes/Imagenes_Indice/lideres.jpg");
+    /* El tamaño de la imagen de fondo se adapta al elemento */
+    background-size: auto;
+    /* La posición de la imagen de fondo se centra */
+    background-position: center;
+    /* El elemento se muestra como un contenedor flexible */
+    display: flex;
+    /* El contenido del elemento se alinea horizontalmente al centro */
+    justify-content: center;
+    /* El contenido del elemento se alinea verticalmente al centro */
+    align-items: center;
+    /* El elemento tiene un relleno de 40 píxeles por cada lado */
+    padding: 40px 40px;
+}
+
+    /* Esta regla se aplica al elemento h1 dentro de la clase anterior */
+    .indice__lideres h1 {
+        /* El color del texto es blanco */
+        color: white;
+        /* El tamaño de la fuente es 50 píxeles */
+        font-size: 50px;
+        /* El texto tiene una sombra negra */
+        text-shadow: 2px 2px 4px black;
+    }
+
+/* Esta regla se aplica a todos los elementos section */
+section {
+    /* Los elementos section tienen un relleno de 20 píxeles por cada lado */
+    padding: 20px;
+}
+
+    /* Esta regla se aplica a todos los elementos h2 dentro de los elementos section */
+    section h2 {
+        /* El tamaño de la fuente es 30 píxeles */
+        font-size: 30px;
+        /* El margen inferior es 20 píxeles */
+        margin-bottom: 20px;
+    }
+
+    /* Esta regla se aplica a todos los elementos p dentro de los elementos section */
+    section p {
+        /* El tamaño de la fuente es 18 píxeles */
+        font-size: 18px;
+        /* La altura de la línea es 1.5 veces el tamaño de la fuente */
+        line-height: 1.5;
+    }
+
+/* Esta regla se aplica a todos los elementos article */
+article {
+    /* Los elementos article se muestran como contenedores flexibles */
+    display: flex;
+    /* Los elementos article permiten que su contenido se ajuste al espacio disponible */
+    flex-wrap: wrap;
+    /* El margen inferior es 20 píxeles */
+    margin-bottom: 20px;
+    /* El margen es 10 píxeles por cada lado */
+    margin: 10px;
+    /* Los elementos article tienen un borde de 1 píxel de grosor y de color gris claro */
+    border: 1px solid #ccc;
+    /* Los elementos article tienen una sombra de color gris oscuro */
+    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+}
+
+    /* Esta regla se aplica a todas las imágenes dentro de los elementos article */
+    article img {
+        /* La transición de la propiedad flex se hace en 1 segundo */
+        transition: flex 1s;
+        /* El ancho de las imágenes es el 10% del contenedor */
+        width: 10%;
+        /* El alto de las imágenes se ajusta al ancho */
+        height: auto;
+        /* Las imágenes se recortan para ajustarse al contenedor */
+        object-fit: cover;
+        /* Las imágenes ocupan una parte del espacio flexible */
+        flex: 1;
+    }
+        /* Esta regla se aplica cuando se pasa el cursor sobre las imágenes dentro de los elementos article */
+        article img:hover {
+            /* Las imágenes ocupan dos partes del espacio flexible */
+            flex: 2;
+        }
+
+    /* Esta regla se aplica a todos los elementos div dentro de los elementos article */
+    article div {
+        /* La transición de la propiedad flex se hace en 1 segundo */
+        transition: flex 1s;
+        /* Los elementos div ocupan una parte del espacio flexible */
+        flex: 1;
+        /* Los elementos div tienen un relleno de 10 píxeles por cada lado */
+        padding: 10px;
+    }
+
+        /* Esta regla se aplica cuando se pasa el cursor sobre los elementos div dentro de los elementos article */
+        article div:hover {
+            /* Los elementos div ocupan dos partes del espacio flexible */
+            flex: 2;
+            /* Los elementos div tienen un relleno de 10 píxeles por cada lado */
+            padding: 10px;
+        }
+
+        /* Esta regla se aplica a todos los elementos h3 dentro de los elementos div dentro de los elementos article */
+        article div h3 {
+            /* El tamaño de la fuente es 24 píxeles */
+            font-size: 24px;
+            /* El margen inferior es 10 píxeles */
+            margin-bottom: 10px;
+        }
+
+        /* Esta regla se aplica a todos los elementos p dentro de los elementos div dentro de los elementos article */
+        article div p {
+            /* El tamaño de la fuente es 18 píxeles */
+            font-size: 18px;
+            /* La altura de la línea es 1.5 veces el tamaño de la fuente */
+            line-height: 1.5;
+        }
+
+    /* Esta regla se aplica a los elementos article que tienen un índice impar */
+    article:nth-child(odd) {
+        /* Los elementos article impar invierten el orden de sus hijos */
+        flex-direction: row-reverse;
+    }
+
+    /* Esta regla se aplica a los elementos article que tienen un índice par */
+    article:nth-child(even) {
+        /* Los elementos article par tienen una animación llamada slide-izquierda */
+        animation: slide-izquierda 2s ease-in-out;
+    }
+
+    /* Esta regla se aplica a los elementos article que tienen un índice impar */
+    article:nth-child(odd) {
+        /* Los elementos article impar tienen una animación llamada slide-derecha */
+        animation: slide-derecha 2s ease-in-out;
+    }
+
+/* Esta regla define la animación slide-izquierda */
+@keyframes slide-izquierda {
+    /* El estado inicial de la animación */
+    from {
+        /* El elemento se desplaza hacia la izquierda un 100% de su ancho */
+        transform: translateX(-100%);
+        /* El elemento tiene una opacidad de 0 */
+        opacity: 0;
+    }
+    /* El estado final de la animación */
+    to {
+        /* El elemento se desplaza a su posición original */
+        transform: translateX(0);
+        /* El elemento tiene una opacidad de 1 */
+        opacity: 1;
+    }
+}
+
+/* Esta regla define la animación slide-derecha */
+@keyframes slide-derecha {
+    /* El estado inicial de la animación */
+    from {
+        /* El elemento se desplaza hacia la derecha un 100% de su ancho */
+        transform: translateX(100%);
+        /* El elemento tiene una opacidad de 0 */
+        opacity: 0;
+    }
+    /* El estado final de la animación */
+    to {
+        /* El elemento se desplaza a su posición original */
+        transform: translateX(0);
+        /* El elemento tiene una opacidad de 1 */
+        opacity: 1;
+    }
+}
+
+/* Esta regla se aplica cuando el ancho máximo de la pantalla es 768 píxeles */
+@media (max-width: 768px) {
+
+    /* Esta regla se aplica a todos los elementos article */
+    article {
+        /* Los elementos article cambian su dirección a columna */
+        flex-direction: column;
+    }
+
+        /* Esta regla se aplica a todas las imágenes dentro de los elementos article */
+        article img {
+            /* El ancho de las imágenes es el 100% del contenedor */
+            width: 100%;
+            /* El alto de las imágenes se ajusta al ancho */
+            height: auto;
+        }
+
+        /* Esta regla se aplica a los elementos article que tienen un índice par */
+        article:nth-child(even) {
+            /* Los elementos article par no tienen animación */
+            animation: none;
+        }
+
+        /* Esta regla se aplica a los elementos article que tienen un índice impar */
+        article:nth-child(odd) {
+            /* Los elementos article impar no tienen animación */
+            animation: none;
+        }
+}

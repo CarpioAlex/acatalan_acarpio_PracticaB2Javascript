@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./Estilos/estilos.css" />
+    <link rel="stylesheet" href="./Estilos/contacto.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/344a6c6bab.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <header class="header">
+    <nav class="nav">
+      <a href="#rellenar" class="nav__logo">
+        <img
+          src="./Recursos/Imagenes/logo_pequeño_nobg.png "
+          alt=""
+          width="50"
+          height="auto"
+        />
+        <div>Airsoft Mallorca</div>
+      </a>
+
+      <a href="#menu" class="nav__menu--abrir">
+        <img src="Recursos/Imagenes/menu_movil_abrir.svg" alt="Abrir menú." />
+      </a>
+
+      <ul id="menu" class="nav__menu">
+        <a href="#" class="nav__menu--cerrar">
+          <img
+            src="Recursos/Imagenes/menu_movil_cerrar.svg"
+            alt="Cerrar menú."
+          />
+        </a>
+        <li><a href="indice.html">Inicio</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a onclick="temaOscuroContacto()" id="botontema">Tema</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <body>
+    
+    <main>
+
+      <h1>Formulario de contacto</h1>
+
+
+      <section>
+      <!-- Inicio formularios + JS a paartir de aquí todo es nuevo. -->
+
+      
+
+
+
+      <form id="formulario1">
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Introduzca su nombre.">
+        
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" name="apellidos" id="apellidos" placeholder="Introduzca sus apellidos">
+
+        
+        <input type="radio" name="sexoH" id="sexoH>
+        <label for="sexoH">Hombre</label>
+        <input type="radio" name="sexoM" id="sexoM>
+        <label for="sexoM">Mujer</label>
+        <input type="radio" name="sexoO" id="sexoO>
+        <label for="sexoO">Otro</label>
+
+        
+        <label for="email">Correo electrónico</label>
+        <input type="email" name="email" id="email" placeholder="Introduzca su email." required>
+
+        <label for="numero">Número de contacto</label>
+        <input type="text" name="numero" id="numero" placeholder="666 555 444" required>
+
+        <label for="condiciones">¿Aceptas las condiciones de uso?</label>
+        <input type="checkbox" name="condiciones" id="condiciones" checked required>
+
+
+        <label for="motivo">Motivo de contacto</label>
+        <select name="motivo" id="motivo">
+          <option value="Problema con el pedido"">Problema con el pedido</option>
+          <option value="Problema de pago"">Problema de pago</option>
+          <option value="Sugerencia">Sugerencia</option>
+          <option value="Reclamaciones o amenazas varias"">Reclamaciones o amenazas varias</option>
+          <option value="Otros">Otros</option>
+        </select>
+
+        <label for="avatar"> ¿Quieres añadir una foto a tu comentario? </label>
+        <input type="text" name="avatar" id="avatar">
+
+        <label for="mensaje"> Escriba aquí su mensaje</label>
+        <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+
+        <input type="button" value="Enviar" onclick="lanzarComentario()">
+
+      </section>
+
+
+
+
+
+      </form>
+
+
+
+      <form id="formularioValidaciones">
+
+
+      
+
+        <div class="contenedorContraseña">
+          <label for="contraseña">Contraseña</label>
+          <input type="password" name="contraseña" id="contraseña" class="contraseña" placeholder="Introduzca su contraseña." autocomplete="off">
+      </div>
+      
+          
+        
+          <label for="tarjeta">Tarjeta de crédito</label>
+          <input type="text" name="tarjeta" id="tarjeta" placeholder="Tarjeta de credito" required autocomplete="off">
+          <div id="icono-tarjeta"></div>
+          <input type="button" value="Enviar" onclick="validarContraseña()">
+
+      </form>
+      
+      <div id="leyenda">
+       
+        <h3>La contraseña debe tener:</h3>
+        <p id ="minus" class="mal"> Una letra mínuscula.</p>
+
+        <p id ="mayus" class="mal"> Una letra mayúscula.</p>
+
+        <p id ="numeros" class="mal"> Un número.</p>
+
+        <p id ="simbolo" class="mal"> Una símbolo.</p>
+
+        <p id ="tamaño" class="mal"> Mínimo 8 letras.</p>
+        
+
+
+
+      </div>
+
+
+
+
+    </main>
+
+    <section>
+      <div id="seccion-comentarios">
+        <h2>Sección de Comentarios</h2>
+        <ul id="lista-comentarios">
+          <li class="comentario">
+            <div class="foto-perfil">
+              <!-- La foto de perfil se añadirá aquí -->
+            </div>
+            <div class="texto-comentario">
+              <!-- El texto del comentario se añadirá aquí -->
+            </div>
+          </li>
+          <!-- Más comentarios se añadirán aquí -->
+        </ul>
+      </div>
+    </section>
+    
+    
+    <section id ="valoracion">
+
+      <h1>Envíanos tu feedback y sugerencias</h1>
+
+
+
+      <input type="button" id="valorar" value="Valoración" onclick="mostrarVentana()"></input>
+      <div id="ventanaEmergente" class="ventanaOculta">
+          <div class="ventanaCentrada">
+              <p>¿Cómo fue tu experiencia?</p>
+              <div id="estrellas">
+                  <i class="far fa-star" onmouseover="iluminarEstrellas(1)" onclick="enviarValoracion(1)"></i>
+                  <i class="far fa-star" onmouseover="iluminarEstrellas(2)" onclick="enviarValoracion(2)"></i>
+                  <i class="far fa-star" onmouseover="iluminarEstrellas(3)" onclick="enviarValoracion(3)"></i>
+                  <i class="far fa-star" onmouseover="iluminarEstrellas(4)" onclick="enviarValoracion(4)"></i>
+                  <i class="far fa-star" onmouseover="iluminarEstrellas(5)" onclick="enviarValoracion(5)"></i>
+              </div>
+              <textarea id="comentario" placeholder="Deja un comentario..."></textarea>
+          </div>
+      </div>
+
+
+
+    </section>
+
+
+    <!-- Inicio footer -->
+    <footer>
+      <div class="contenedor__footer">
+        <section class="columna__footer">
+          <img
+            class="logo__footer"
+            src="./Recursos/Imagenes/logo_pequeño_nobg.png"
+            alt="#Rellenar"
+          />
+
+          <p id="titulo_footer">Airsoft Mallorca</p>
+        </section>
+        <section class="columna__footer">
+          <h3>
+            Contacto
+            <div class="decoracion__footer--titulo"><span></span></div>
+          </h3>
+          <p>Carrer de Caracas, 6, 07007 Palma, Illes Balears</p>
+          <p>Telèfon: 971 27 81 50</p>
+        </section>
+        <aside class="columna__footer">
+          <h3>Enlaces</h3>
+          <div class="decoracion__footer--titulo"><span></span></div>
+
+          <i class="fab fa-github"></i>
+          <i class="fab fa-linkedin-in"></i>
+          <i class="fab fa-css3"></i>
+          <i class="fab fa-cc-paypal"></i>
+        </aside>
+        <section class="columna__footer" id="contenedor_marcas">
+          <h3>
+            Marcas colaboradoras
+            <div class="decoracion__footer--titulo"><span></span></div>
+          </h3>
+
+          <figure>
+            <i class="fab fa-apple"></i>
+          </figure>
+          <figure>
+            <i class="fab fa-java"></i>
+          </figure>
+          <figure>
+            <i class="fab fa-cc-paypal"></i>
+          </figure>
+        </section>
+      </div>
+      <hr />
+      <div class="footer_color">
+        <p class="texto_fin_footer">Alejandro Carpio</p>
+        <p class="texto_fin_footer">Antonio David</p>
+        <p class="texto_fin_footer">Práctica LLM Noviembre/Diciembre</p>
+      </div>
+    </footer>
+
+    <script src="./Scripts/validacionContraseña.js"></script>
+    <script src="./Scripts/tema.js"></script>
+    <script src="./Scripts/formularioDinamico.js"></script>
+    <script src="./Scripts/CargaDinamica.js"></script>
+    <script src="./Scripts/encuestasInteractivas.js"></script>
+
+
+
+  </body>
+</html>

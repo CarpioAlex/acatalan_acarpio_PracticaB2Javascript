@@ -1,0 +1,549 @@
+/* Inicio reglas tienda.html. */
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&family=Saira+Stencil+One&family=Teko:wght@300;400;700&display=swap");
+
+
+
+/* Añadido para la practica 2 */ 
+
+.ventanaOculta {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.ventanaCentrada {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+  width: 80%; 
+  max-width: 500px;
+}
+
+.caja {
+  top: 10px;
+  left: 49.5%;
+  border: 1px solid black;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: top 1s;
+  transform:rotate(0deg);
+  margin-top: 100px;
+}
+
+#tituloCarrusel {
+  text-align: center;
+  font-size: 2em;
+}
+
+.galeria-fondo {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px; 
+}
+
+.galeria-img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.galeria-texto {
+  color: #fff; 
+  text-align: center; 
+  margin: 10px 0;
+}
+
+.galeria {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+
+
+/* Reglas Main */
+
+/* Clase contenedor reutilizable */
+.tienda__contenedor--general {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.contenedor__header--fondo {
+  background-color: #17425789;
+}
+
+.tiendamain__columnas {
+  flex-basis: 50%;
+  min-width: 300px;
+}
+
+.tiendamain__columnas img {
+  max-width: 100%;
+  padding: 5% 0;
+}
+
+.tiendamain__columnas p,
+.tiendamain__columnas h1 {
+  padding-left: 40px;
+}
+
+/* Segunda sección */
+
+.categorias {
+  margin: 70px 0;
+}
+
+.categorias__contenedor {
+  /* Contenedor añadido para contener todas las fotos de las columnas. */
+  display: flex;
+  max-width: 1080px;
+  margin: auto;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.productos__estrella--imagen {
+  /* col3 */
+
+  flex-basis: 30%;
+  min-width: 250px;
+  margin: 5px;
+}
+
+.productos__estrella--imagen img {
+  width: 100%;
+}
+
+.contenedor__filas {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 50px;
+}
+
+.productos--imagen {
+  /* Columnas de los productos */
+  flex-basis: 25%; /* 4 Columnas, 25% de espacio cada una. */
+  padding: 5px;
+  min-width: 200px;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+}
+
+.productos--imagen img {
+  width: 90%;
+  padding-left: 10px;
+}
+
+.titulo_prods {
+  margin: auto 90px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Decoración título con pseudoelemento after. */
+
+.titulo_prods::after {
+  content: "";
+  background: #333;
+  width: 80px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tienda__contenedor--banner {
+  background-color: #13354789;;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.tienda__banner {
+  flex-basis: 50%;
+}
+
+.imagen_banner {
+  margin-top: 20px;
+}
+
+.tienda__banner h1 {
+  font-size: 2em;
+  margin-top: 10px;
+}
+
+.tiendamain__banner p {
+  padding: 10px;
+}
+
+/* Fin reglas Main */
+
+/* Ajustes individuales  */
+
+#cat_text {
+  text-align: center;
+}
+#cat_text {
+  font-family: Saira Stencil One;
+}
+/* Fin reglas tienda.html */
+
+/* Inicio media queries */
+
+@media only screen and (max-width: 500px) {
+  body *:not(.estrellas) { /*Esto es para centrar el texto en movil y no necesariamente centrar las imagenes para que no se descuadre todo.*/
+    text-align: center;
+  }
+
+  .contenedor-precio-estrellas {
+    display: flex;
+    align-items: center;
+  }
+
+  /*Conjunto de selectores separados por comas para asegurarme de que todo se mantenga en su sitio en cada resolución, algunos pueden ser redundantes pero prefiero que sobre a que no que falte. (Esto estará en todas las media queries a partir de esta.*/
+
+  .tiendamain__columnas,
+  .productos__estrella--imagen,
+  .productos--imagen {
+    flex-basis: 100%;
+    min-width: 0;
+    margin: 0px;
+    padding: 5px;
+  }
+
+  .tiendamain__columnas img,
+  .productos__estrella--imagen img,
+  .productos--imagen img {
+    width: 100%;
+    padding: 5% 0;
+  }
+
+  .tiendamain__columnas p,
+  .tiendamain__columnas h1,
+  .productos__estrella--imagen p,
+  .productos__estrella--imagen h1,
+  .productos--imagen p,
+  .productos--imagen h1 {
+    padding-left: 10px;
+  }
+
+  .categorias__contenedor {
+    flex-direction: column;
+  }
+
+  .tienda__contenedor--banner {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .tienda__banner {
+    flex-basis: 100%;
+    min-width: 0;
+  }
+
+  .tiendamain__banner img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+  .imagen_banner {
+    max-width: 100%;
+    height: auto;
+  }
+
+@media only screen and (min-width: 501px) and (max-width: 600px) {
+  /* Movil */
+
+  /* Reglas generales 600 px */
+
+  /* Fin reglas generales */
+
+  /* Reglas Main */
+
+  .productos__estrella--imagen figcaption {
+    text-align: center;
+    font-size: 1.2em;
+  }
+
+  .tienda__contenedor--general {
+    flex-direction: column;
+  }
+
+  .tiendamain__columnas,
+  .productos--imagen {
+    flex-basis: 35%;
+    min-width: 0;
+    margin: 15px;
+  }
+
+  .tiendamain__columnas img,
+  .productos__estrella--imagen img,
+  .productos--imagen img {
+    width: 100%;
+    padding: 5% 0;
+  }
+
+  .tiendamain__columnas p,
+  .tiendamain__columnas h1,
+  .productos__estrella--imagen p,
+  .productos__estrella--imagen h1,
+  .productos--imagen p,
+  .productos--imagen h1 {
+    padding-left: 10px;
+  }
+
+  /* Segunda sección */
+  .categorias__contenedor {
+    flex-direction: column;
+  }
+
+  .tienda__contenedor--banner {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .tienda__banner {
+    flex-basis: 100%;
+    min-width: 0;
+  }
+
+  .tiendamain__banner img {
+    max-width: 100%;
+    height: auto;
+  }
+  /* Fin reglas Main */
+}
+
+@media (min-width: 601px) and (max-width: 795px) {
+  /* Tablet */
+  /* Cambia el comportamiento del menú para tablets medianas.*/
+
+  .nav__menu {
+    position: absolute;
+    background-color: #102441;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: -100%;
+    transition: left 0.3s ease;
+  }
+
+  .nav__menu--abrir {
+    display: block;
+  }
+
+  .nav__menu--cerrar {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+
+  #menu:target {
+    left: 0;
+  }
+
+  #menu:target .nav__menu--abrir {
+    display: none;
+  }
+
+  #menu:target .nav__menu--cerrar {
+    display: block;
+  }
+
+  .productos__estrella--imagen {
+    /* col3 */
+    min-width: 150px;
+    margin: auto;
+  }
+
+  .productos__estrella--imagen img {
+    width: 100%;
+  }
+
+  .productos--imagen {
+    flex-basis: 20%;
+    padding: 5px;
+    min-width: 50px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+  }
+
+  .productos--imagen img {
+    width: 100%;
+  }
+
+  /* Ajustes para el tamaño de la imagen y la longitud del texto */
+  @media only screen and (min-width: 601px) and (max-width: 795px) {
+    .tiendamain__columnas {
+      flex-basis: 30%;
+      box-sizing: border-box;
+      min-width: 0;
+      margin: 10px;
+    }
+  }
+
+  /* Asegurarse de que el texto y la foto de la cabecera no se hagan pequeños */
+  .tiendamain__columnas h1,
+  .tiendamain__columnas p,
+  .tiendamain__columnas img {
+    font-size: 1em;
+    max-width: 100%;
+  }
+
+  /* Segunda sección */
+  .categorias__contenedor {
+    flex-direction: column;
+  }
+
+  .tienda__contenedor--banner {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .tienda__banner {
+    flex-basis: 100%;
+    min-width: 0;
+  }
+
+  .tiendamain__banner img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .productos__estrella--imagen img {
+    flex-basis: 25%;
+  }
+
+  .productos__estrella--imagen {
+    margin: 5px;
+  }
+
+  /* Fin reglas Main */
+}
+
+@media (min-width: 1000px) {
+  body {
+    font-size: 0.8em;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+
+  #cat_text {
+    font-family: Saira Stencil One;
+    margin-top: 10px;
+    font-size: 1.6em;
+  }
+
+  figcaption {
+    font-size: 1.4em;
+  }
+
+  #tituloweb {
+    font-size: 1.4em;
+  }
+
+  .productos__estrella--imagen img,
+  .productos--imagen img,
+  .imagen_banner {
+    width: 80%;
+  }
+
+  /* Aplica el efecto de hover a las imágenes de productos estrella y últimas novedades */
+  .productos--imagen:hover,
+  .productos__estrella--imagen:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Que el hover de arriba no afecte a las primeras ya que esto lo he añadido al final. (No es lo mas limpio pero mejor esto que nada) */
+  #excluir:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  #excluir1:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  #excluir2:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .tiendamain__columnas h1 {
+    font-size: 3em;
+    font-family: Saira Stencil One;
+  }
+
+  .tiendamain__columnas p {
+    font-size: 2em;
+    font-family: Teko;
+  }
+
+  .tiendamain__columnas img {
+    width: 450px;
+    height: auto;
+    margin-left: 20%;
+  }
+
+  .tiendamain__banner p {
+    font-size: 1.4em;
+  }
+
+  .tiendamain__banner h1 {
+    font-size: 1.9em;
+  }
+}
+
+/* Media queries de última hora */
+
+
+/* Alex: Voy a añadir un borde a cada elemento que sea un continente de un contenedor en formatos de pantalla pequeños para que se vea donde empieza y acaba cada producto, tanto para que sea mas fácil de corregir como para que quede más claro.*/
+
+@media only screen and (max-width: 600px), (min-width: 601px) and (max-width: 795px) {
+  .productos--imagen img, .productos__estrella--imagen img {
+    border: 2px solid #000; 
+    border-radius: 10px; 
+  }
+}
+

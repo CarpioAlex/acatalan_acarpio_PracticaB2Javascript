@@ -1,0 +1,864 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&family=Saira+Stencil+One&family=Teko:wght@300;400;700&display=swap');
+
+
+/* Reglas generales sin media query*/
+
+/* Estilo del pop up */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Usar flexbox para centrar el contenido */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Añadir una sombra al pop up */
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    /* Añadir una transición al pop up */
+    transition: 0.3s;
+    /* Añadir un filtro de desenfoque al fondo */
+    backdrop-filter: blur(5px) !important;
+  }
+  
+  /* Estilo del contenido del pop up */
+  .popup-content {
+    /* Hacer que el contenido ocupe la mitad del ancho y alto del pop up */
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    overflow-y: auto;
+    /* Usar flexbox para distribuir el contenido */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Estilo del título del pop up */
+  .popup-content h4 {
+    margin: 0;
+    text-align: center;
+    /* Aumentar el tamaño del texto */
+    font-size: 24px;
+  }
+
+  /* Estilo del texto del pop up */
+  .popup-content p {
+    margin: 10px 0;
+    text-align: justify;
+    /* Aumentar el tamaño del texto */
+    font-size: 18px;
+  }
+
+  /* Estilo de la lista del pop up */
+  .popup-content ul {
+    margin: 10px 0;
+    list-style: disc;
+    padding-left: 20px;
+    /* Aumentar el tamaño del texto */
+    font-size: 18px;
+  }
+
+  /* Estilo de los botones del pop up */
+  .popup-content button {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    /* Añadir un borde redondeado a los botones */
+    border-radius: 5px;
+    /* Añadir un efecto de hover a los botones */
+    transition: 0.3s;
+    /* Aumentar el tamaño del texto */
+    font-size: 18px;
+  }
+  
+  /* Estilo del botón de aceptar */
+  .popup-content button#aceptar {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* Estilo del botón de aceptar al pasar el ratón */
+  .popup-content button#aceptar:hover {
+    /* Oscurecer el color de fondo */
+    background-color: darkgreen;
+  }
+  
+  /* Estilo del botón de cancelar */
+  .popup-content button#cancelar {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* Estilo del botón de cancelar al pasar el ratón */
+  .popup-content button#cancelar:hover {
+    /* Oscurecer el color de fondo */
+    background-color: darkred;
+  }
+
+  /* Estilo del contenedor de los botones */
+  .popup-content .buttons {
+    /* Alinear los botones a la derecha */
+    display: flex;
+    justify-content: center;
+    /* Hacer que los botones ocupen todo el espacio disponible */
+    flex: 1;
+    /* Hacer que los botones sean horizontales */
+    flex-direction: column;
+  }
+
+.modoOscuro {
+    background-color: #333 !important;
+    color: white;
+}
+
+.modoOscuroContacto {
+    background-color: #333;
+    
+}
+
+
+#botontema {
+    background-color: #f8f8f8;
+    color: #333; 
+    border: none;
+    text-decoration: none; /* Sin subrayado */
+    font-size: 15px; /* Tamaño del texto */
+    margin: 1px 2px;
+    transition-duration: 0.4s; /* Duración de la transición */
+    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa por encima */
+}
+
+#botontema:hover {
+    background-color: #333; /* Color de fondo al pasar el ratón por encima */
+    color: white; /* Color del texto al pasar el ratón por encima */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    list-style: none;
+}
+
+
+/*Reglas para las fuentes */
+
+.nav li a {
+    font-family: Oxanium;
+    font-size: 13px;
+  }
+  .nav a div {
+    font-family: Saira Stencil One;
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: Teko;
+  }
+
+body {
+    font-family: Oxanium;
+}
+
+    html {
+        font-size: 62.5%;
+        
+    }
+
+    a {
+        text-decoration: none; /* Elimina la linea de debajo de los enlaces de manera global. */
+        color: white;
+    }
+
+/* Clase para acentuar partes de texto sin importar en que página se encuentre. */
+    .acentuar {
+        color: #d22426;
+        font-weight: 500;
+    }
+
+    /* Fin reglas generales */ 
+
+
+    /* Reglas Header y Nav */
+
+
+    
+    .header {
+        left: 0;
+        top: 0;
+        width: 100%;
+        position: relative;
+    }
+    
+.nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color:  rgb(32, 32, 93);
+    max-width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 4px 5px #3A4460;
+}
+
+
+
+.nav__logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    margin-left: 3%;
+    gap: 160px;
+}
+
+.nav__menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav__menu li {
+    padding: 0 15px;
+    line-height: 50px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+}
+
+.nav__menu li a {
+    position: relative;
+    padding: 5px;
+    font-size: 1.5rem !important; /*Aumento la especifidad para que se unifique el tamaño de letra.*/
+    z-index: 1;
+    transition: .3s;
+}
+
+/*Decoraciones de los enlaces con hover.*/
+.nav__menu li a:nth-child(1) {
+    color: rgb(255, 255, 255);
+}
+
+.nav__menu li a:hover {
+    color: rgb(255, 0, 0);
+}
+
+.nav__menu li a::before {
+    content:"";
+    position: absolute;
+    height: 2px;
+    transition: .3s;
+    background-color: white;
+    left: 0;
+    width: 0;
+    bottom: 0;
+    
+}
+
+.nav__menu li a:hover::before {
+    width: 100%;
+
+    
+}
+
+/* Colores y estilo del boton del nav soy un poco vago y en lugar de cambiar el color al .svg le invierto el color con el filtro ya que el contrario de blanco es negro.*/
+
+.nav__menu--abrir img {
+    filter: invert(1);
+}
+
+.nav__menu--cerrar img {
+    filter: invert(1);
+}
+
+.header p {
+        padding: 0 15px;
+        line-height: 50px;
+        text-transform: uppercase;
+        font-size: 1.2em;
+    }
+    
+.nav__menu--abrir, .nav__menu--cerrar {
+        display: none;
+    }
+    
+.nav__menu--cerrar {
+        align-self: flex-end;
+    }
+    
+
+
+
+/* Inicio reglas Footer */
+
+footer {
+    width: 100%;
+    margin-top: 20px;
+    bottom: 0px;
+    left: 0px; /*Para que siempre esté al pie de la página.*/
+    background-color:#102441;
+    color: #FB5104;
+}
+
+footer i {
+    font-size: 20px;
+}
+
+
+
+footer a,
+footer i {
+    color: orangered;
+}
+
+.contenedor__footer {
+    display: flex;
+    width: 85%;
+    margin: auto;
+    flex-wrap: wrap;
+    align-items: stretch; /* Alinea el contenido verticalmente */
+    justify-content: center; /* Alinea el contenido horizontalmente */
+}
+
+.columna__footer {
+    flex-basis: 20%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea los elementos al principio de la columna */
+    align-items: center;
+}
+
+/*Hace la segunda y tercera columna más chica para que quepa todo en fila.*/
+.columna__footer:nth-child(2), .columna__footer:nth-child(3) {
+    flex-basis: 15%;
+}
+
+.columna__footer #contenedor_marcas {
+    display: flex;
+    padding: 10px;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+}
+
+.marca_colaboradora {
+    width: 20px;
+}
+
+#contenedor_marcas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1px;
+}
+
+#contenedor_marcas figure {
+    margin-top: 3px;
+    width: 50%;
+}
+
+
+
+#contenedor_marcas .marca_colaboradora {
+    width: 100%; 
+}
+
+/*Estilizado de los iconos de enlaces.*/
+
+footer aside i {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align:center;
+    font-size: 20px;
+    color: black;
+}
+
+footer aside {
+    display: flex;
+    flex-direction: row; /* Hace que los iconos aparezcan en fila */
+    justify-content: space-between; 
+}
+
+footer hr {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.logo__footer {
+    height: auto;
+    width: 80px;
+    margin-top: 10px;
+    margin-left: -10px; /* Mueve el logo más a la izquierda */
+}
+
+.texto_fin_footer {
+    text-align: center;
+}
+
+.columna__footer h3 {
+    text-align: center; /* Centra los títulos */
+}
+
+
+.decoracion__footer--titulo {
+    width: 15em;
+    height: 5px;
+    position: relative;
+    background-color: black;
+    border-radius: 3px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    left: 0;
+    overflow: hidden;
+}
+
+.decoracion__footer--titulo span {
+    width: 15px;
+    height: 100%;
+    background: white;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 3s linear infinite;
+}
+
+@keyframes moving {
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+
+
+.footer_color {
+    background-color: #172a46;
+}
+
+#titulo_footer {
+    font-family: Saira Stencil One;
+}
+
+/* Fin reglas footer */
+
+
+  
+
+
+
+
+@media only screen and (max-width: 500px) { /* Movil */
+    
+    /* Reglas generales 500 px */ 
+
+    /* Fin reglas generales */
+
+    
+    /* Reglas enlaces menu navbar */
+    
+    .nav__menu {
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+        overflow-y: auto;
+        background-color: #e6a7a7 ;
+        opacity: 0;
+        pointer-events: none;
+        justify-content: center;
+        z-index: 100;
+    }
+    
+    .nav__menu li {
+        padding: 0;
+        line-height: 60px;
+    }
+
+    
+    .nav__menu--abrir, .nav__menu--cerrar {
+        display: block;
+        border: none;
+        background: none;
+    }
+
+    .nav__menu--cerrar {
+        align-self: first baseline;
+        padding: 20px 15px;
+        
+    }
+/*Línea que hace que cuando hagas click aparezca el menú. (Mas info en el readme)*/
+    .nav__menu:target {
+        opacity: 1;
+        pointer-events: all;
+    }
+    
+    /* Reglas footer movil */
+
+    footer {
+        bottom: unset;
+        border-top-left-radius: 0px;
+        text-align: center;
+
+    }
+    
+    
+    footer h3 {
+        text-align: center;
+    }
+
+    .columna__footer {
+        flex-basis: 100%;
+      }
+    
+      .columna__footer:nth-child(2), .columna__footer:nth-child(3) {
+        flex-basis: 100%; 
+    }
+
+    
+      #contenedor_marcas {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 1px;
+        
+        
+      }
+      
+      #contenedor_marcas figure {
+        margin-top: 3px;
+        width: 10%;
+        align-self: center;
+      }
+      
+      #contenedor_marcas .marca_colaboradora {
+        width: 100%; 
+    
+      }
+    
+
+      footer aside {
+        display: flex;
+        flex-direction: row; 
+        justify-content: center; 
+        align-items: center; 
+    }
+    
+
+    /*Fin reglas footer movil*/
+
+
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) { /* Movil */
+    
+    /* Reglas generales 600 px */ 
+
+    /* Fin reglas generales */
+
+    
+    /* Reglas enlaces menu navbar */
+
+    .nav__menu {
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        overflow-y: auto;
+        background-color: #e6a7a7;
+        opacity: 0;
+        pointer-events: none;
+        justify-content: center;
+        z-index: 100;
+    }
+    
+    .nav__menu li {
+        padding: 0;
+        line-height: 60px;
+    }
+
+    
+    .nav__menu--abrir, .nav__menu--cerrar {
+        display: block;
+        border: none;
+        background: none;
+    }
+
+    .nav__menu--cerrar {
+        align-self: first baseline;
+        padding: 20px 15px;
+        
+    }
+
+    .nav__menu:target {
+        opacity: 1;
+        pointer-events: all;
+    }
+    
+    /* Reglas footer movil */
+
+    footer {
+        bottom: unset;
+        border-top-left-radius: 0px;
+        text-align: center;
+
+    }
+    
+    footer h3 {
+        text-align: center;
+    }
+
+    .columna__footer {
+        flex-basis: 100%;
+      }
+    
+      .columna__footer:nth-child(2), .columna__footer:nth-child(3) {
+        flex-basis: 100%; 
+    }
+
+    
+      #contenedor_marcas {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 1px;
+        
+        
+      }
+      
+      #contenedor_marcas figure {
+        margin-top: 3px;
+        width: 10%;
+        align-self: center;
+      }
+      
+      #contenedor_marcas {
+        width: 10%;
+    
+      }
+    
+      .marca_colaboradora {
+        width: 3%;
+      }
+
+      .logo__footer {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 15px;
+    }
+      }
+
+    /*Fin reglas footer movil*/
+
+
+
+
+
+
+
+
+
+@media (min-width: 601px) and (max-width: 768px) { /* Tablet */
+    /* Cambia el comportamiento del menú para tablets medianas.*/
+    .nav__menu {
+        position: absolute;
+        background-color: #102441;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: -100%;
+        transition: left 0.3s ease;
+        font-size: 0.7em;
+    }
+
+    .nav__menu--abrir {
+        display: block;
+    }
+
+    .nav__menu--cerrar {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 10px;
+    }
+
+    #menu:target {
+        left: 0;
+    }
+
+    #menu:target .nav__menu--abrir {
+        display: none;
+    }
+
+    #menu:target .nav__menu--cerrar {
+        display: block;
+    }
+
+    /* Ajustes para el tamaño de la imagen y la longitud del texto */
+    .tiendamain__columnas,
+    .productos__estrella--imagen,
+    .productos--imagen {
+        flex-basis: 45%; 
+        box-sizing: border-box;
+        min-width: 0;
+        margin: 2.5%; 
+    }
+
+    /* Reglas footer movil */
+
+    footer {
+        bottom: unset;
+        border-top-left-radius: 0px;
+        text-align: center;
+
+    }
+    
+    footer h3 {
+        text-align: center;
+    }
+
+    .columna__footer {
+        flex-basis: 100%;
+      }
+    
+      .columna__footer:nth-child(2), .columna__footer:nth-child(3) {
+        flex-basis: 100%; 
+    }
+
+    
+      #contenedor_marcas {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 1px;
+        
+        
+      }
+      
+      #contenedor_marcas figure {
+        margin-top: 3px;
+        width: 10%;
+        align-self: center;
+      }
+      
+      #contenedor_marcas {
+        width: 10%;
+    
+      }
+    
+      .marca_colaboradora {
+        width: 3%;
+      }
+
+      .logo__footer {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 15px;
+    }
+      }
+
+
+    
+
+
+
+
+@media (min-width: 769px) {
+    .nav { /*Arregla un bug del nav para que no se desborde la letra.*/
+        font-size: 0.8em;
+
+    }
+
+    /* Reglas footer movil */
+
+    footer {
+        bottom: unset;
+        border-top-left-radius: 0px;
+        text-align: center;
+
+    }
+    
+    footer h3 {
+        text-align: center;
+    }
+
+    .columna__footer {
+        flex-basis: 100%;
+      }
+    
+      .columna__footer:nth-child(2), .columna__footer:nth-child(3) {
+        flex-basis: 100%; 
+    }
+
+    
+      #contenedor_marcas {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 1px;
+        
+        
+      }
+      
+      #contenedor_marcas figure {
+        margin-top: 3px;
+        width: 10%;
+        align-self: center;
+      }
+      
+      #contenedor_marcas {
+        width: 10%;
+    
+      }
+    
+      .marca_colaboradora {
+        width: 3%;
+      }
+
+      .logo__footer {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 15px;
+    }
+      }
+
+
+@media (min-width: 1000px) {
+    .nav__menu li {
+        padding: 0 30px; /* Aumenta el padding según tus necesidades */
+        margin: 10px; /* Espacio alrededor de los elementos de la lista */
+    }
+
+    .nav__menu li a {
+        align-items: center;
+        gap: 10px; 
+        font-size: 2em;
+    }
+
+    .nav__menu {
+        align-items: center;
+    }
+
+}

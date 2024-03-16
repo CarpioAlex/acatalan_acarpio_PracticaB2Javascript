@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link rel="stylesheet" href="./Estilos/estilos.css" />
+    <link rel="stylesheet" href="./Estilos/tienda_estilos.css" />
+    <link rel="stylesheet" href="./Estilos/carrusel.css">
+    <!-- Importa una fuente para tener iconos. (Es JS pero pedí permiso por mail.) -->
+    <script
+      src="https://kit.fontawesome.com/344a6c6bab.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Antonio, Alejandro Carpio Moratalla" />
+    <meta name="description" content="..." />
+    <link rel="stylesheet" href="./estilos.css" />
+    <title>Document</title>
+  </head>
+  <body>
+      <!-- Simplemente contiene el header para poder ponerle un color de fondo. -->
+      <div class="contenedor__header--fondo">
+          <header class="header">
+              <nav class="nav">
+                  <a href="#rellenar" class="nav__logo">
+                      <img src="./Recursos/Imagenes/logo_pequeño_nobg.png" alt="Logo pequeño de la web." width="50"
+                           height="auto">
+                      <div #id="tituloweb">Airsoft Mallorca</div>
+                  </a>
+
+                  <a href="#menu" class="nav__menu--abrir">
+                      <img src="Recursos/Imagenes/menu_movil_abrir.svg" alt="Abrir menú." />
+                  </a>
+
+                  <ul id="menu" class="nav__menu">
+                      <a href="#" class="nav__menu--cerrar">
+                          <img src="Recursos/Imagenes/menu_movil_cerrar.svg"
+                               alt="Cerrar menú." />
+                      </a>
+                      <li><a href="indice.html">Inicio</a></li>
+                      <li><a href="tienda.html">Tienda</a></li>
+                      <li><a href="nosotros.html">Nosotros</a></li>
+                      <li><a href="contacto.html">Contacto</a></li>
+                      <li><a onclick="temaOscuro()" id="botontema">Tema</a></li>
+                      <li><a onclick="tirarDado()" id="botontema">Dado</a></li>
+      
+                      <li class="icono"><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                      <li class="icono"><a href="#"><i class="fas fa-heart"></i></a></li>
+                  </ul>
+              </nav>
+          </header>
+          <!-- Texto de inicio junto al logo. -->
+          <main class="tienda__contenedor--general">
+              <section class="tiendamain__columnas">
+                  <h1>Airsoft Mallorca</h1>
+                  <p>
+                      ¡Bienvenidos a Airsoft Mallorca! Somos tu <span class="acentuar">tienda de airsoft de confianza</span>, ofreciendo una amplia gama de productos de alta calidad
+                          . Nuestro objetivo es proporcionarte una experiencia de compra excepcional.
+
+                          Ya sea que busques <span class="acentuar">réplicas de armas, accesorios tácticos o vestimenta de airsoft</span>, tenemos algo para ti.
+                          Nos enorgullece nuestro servicio al cliente y estamos constantemente añadiendo nuevos productos a nuestra colección.
+
+                          Así que, ya seas un veterano del airsoft o un principiante, te invitamos a explorar nuestra web. ¡Estamos seguros de que encontrarás algo que te encantará! <span class="acentuar">Gracias por elegir Airsoft Mallorca. ¡Esperamos verte pronto!</span>
+                  </p>
+              </section>
+              <section class="tiendamain__columnas">
+                  <img src="./Recursos/Imagenes/logo_grande_nobg.png" alt="foto_cabecera" />
+
+              </section>
+</div>
+      <!-- Productos estrella/categorias -->
+
+      <h2 id="cat_text">Nuestras categorías:</h2>
+
+      <section class="categorias__contenedor">
+          <article class="tienda__contenedor--general">
+              <figure class="productos__estrella--imagen"
+                      id="excluir">
+                  <figcaption>Accesorios tácticos</figcaption>
+                  <img class="foto_cat" src="./Recursos/Imagenes/Imagenes_Tienda/categoria1.jpg" alt="Equipación de airsoft." />
+              </figure>
+              <figure class="productos__estrella--imagen"
+                      id="excluir1">
+                  <figcaption>Vestimenta de airsoft</figcaption>
+                  <img class="foto_cat" src="./Recursos/Imagenes/Imagenes_Tienda/categoria2.jpg" alt="Jugador de airsoft equipado." />
+              </figure>
+              <figure class="productos__estrella--imagen"
+                      id="excluir2">
+                  <figcaption>Replicas para tus partidas</figcaption>
+                  <img class="foto_cat" src="./Recursos/Imagenes/Imagenes_Tienda/categoria3.jpg" alt="Segundo jugador de airsoft equipado." />
+              </figure>
+          </article>
+      </section>
+
+      <!-- Fin productos estrella categorías -->
+      <!-- Productos más vendidos -->
+
+      <article>
+          <h2 class="titulo_prods">Productos estrella</h2>
+          <section class="contenedor__filas">
+              <!-- Productos -->
+              <figure class="productos--imagen">
+                  <img src="./Recursos/Imagenes/Imagenes_Tienda/producto1.jpg" alt="Primer producto, réplica azul." onclick="mostrarImagen(producto1, texto1)"/>
+                  <figcaption>
+                      <h4>Nombre Producto</h4>
+                      <figure class="productos__estrellas">
+                          <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                      </figure>
+                      <p class="precio">666.66</p>
+                  </figcaption>
+              </figure>
+              <figure class="productos--imagen">
+                  <img src="./Recursos/Imagenes/Imagenes_Tienda/producto2.jpg" alt="Segundo producto, replica." onclick="mostrarImagen(producto2, texto2)" />
+                  <figcaption>
+                      <h4>Nombre Producto</h4>
+                      <figure class="productos__estrellas">
+                          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      </figure>
+                      <p class="precio">777.66</p>
+                  </figcaption>
+              </figure>
+              <figure class="productos--imagen">
+                  <img src="./Recursos/Imagenes/Imagenes_Tienda/producto3.jpg" alt="Tercer producto, replica marron." onclick="mostrarImagen(producto3, texto3)"/>
+                  <figcaption>
+                      <h4>Nombre Producto</h4>
+                      <figure class="productos__estrellas">
+                          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      </figure>
+                      <p class="precio">888.66</p>
+                  </figcaption>
+              </figure>
+              <figure class="productos--imagen">
+                  <img src="./Recursos/Imagenes/Imagenes_Tienda/producto4.jpg" alt="Cuarto producto replica inclinada." onclick="mostrarImagen(producto4, texto4)"/>
+                  <figcaption>
+                      <h4>Nombre Producto</h4>
+                      <figure class="productos__estrellas">
+                          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                      </figure>
+                      <p class="precio">636.66</p>
+                  </figcaption>
+              </figure>
+          </section>
+
+          <!-- Fin productos -->
+          <!-- Novedades -->
+          <h2 class="titulo_prods">Últimas novedades</h2>
+          <section class="contenedor__filas">
+              <figure class="productos--imagen">
+                  <img src="./Recursos/Imagenes/Imagenes_Tienda/novedad1.jpg" alt="Casco de airsoft." onclick="mostrarImagen(novedad1, texto5)"/>
+                  <figcaption>
+                      <h4>Nombre Producto</h4>
+                      <figure class="productos__estrellas">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                      </figure>
+                      <p>Precio</p>
+                  </figcaption>
+              </figure>
+              <figure class="productos--imagen">
+                  <img src="./Recursos/Imagenes/Imagenes_Tienda/novedad2.jpeg" alt="Chaleco de airsoft" onclick="mostrarImagen(novedad2, texto6)"/>
+                  <figcaption>
+                      <h4>Nombre Producto</h4>
+                      <figure class="productos__estrellas">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                      </figure>
+                      <p>Precio</p>
+                  </figcaption>
+              </figure>
+              <figure class="productos--imagen">
+                  <img src="./Recursos/Imagenes/Imagenes_Tienda/novedad3.jpg" alt="Bote de municion de plastico." onclick="mostrarImagen(novedad3, texto7)" />
+                  <figcaption>
+                      <h4>Nombre Producto</h4>
+                      <figure class="productos__estrellas">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                      </figure>
+                      <p>Precio</p>
+                  </figcaption>
+              </figure>
+              <figure class="productos--imagen">
+                  <img src="./Recursos/Imagenes/Imagenes_Tienda/novedad4.jpg" alt="Kit completo de airsoft." onclick="mostrarImagen(novedad4, texto8)"/>
+                  <figcaption>
+                      <h4>Nombre Producto</h4>
+                      <figure class="productos__estrellas">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                      </figure>
+                      <p>Precio</p>
+                  </figcaption>
+              </figure>
+          </section>
+      </article>
+
+      <!-- Banner 1 -->
+      <article class="tienda__contenedor--banner">
+          <section class="tiendamain__banner">
+              <h1>¡Gracias por visitar nuestra tienda!</h1>
+              <p>
+                  Apreciamos tu visita y esperamos que encuentres lo que buscas. Estamos constantemente mejorando y ampliando nuestra gama de productos para ofrecerte lo mejor. ¡Vuelve pronto para descubrir nuestras novedades!
+              </p>
+          </section>
+          <section class="tiendamain__banner">
+              <img class="imagen_banner" src="./Recursos/Imagenes/Imagenes_Tienda/banner_final.png" alt="Banner de un soldado." />
+          </section>
+      </article>
+
+
+
+
+
+      <!-- Contenedor carrusel -->
+
+      <section class="contenedorCarrusel">
+
+          <h1 id="tituloCarrusel">Tu web de confianza!</h1>
+
+          <article class="carrusel">
+
+              <!-- Imagenes -->
+              <figure class="imagen">
+                  <img src="https://source.unsplash.com/random?airsoft"alt="" />
+                  <figcaption>Productos de airsoft</figcaption>    
+              </figure>
+              <figure class="imagen">
+                  <img src="https://source.unsplash.com/random?webshop"
+                       alt="" />
+                  <figcaption>Tu tienda de confianza</figcaption> 
+              </figure>
+              <figure class="imagen">
+                  <img src="https://source.unsplash.com/random?airsoft"
+                       alt="" />
+                       <figcaption>¿Buscas productos de airsoft? Elígenos!</figcaption>  
+              </figure>
+              <figure class="imagen">
+                  <img src="https://source.unsplash.com/random?onlineshop"
+                       alt="" />
+                       <figcaption>Satisfacción garantizada.</figcaption>
+              </figure>
+
+              <!-- Botones -->
+              <button class="boton boton-siguiente" id="botonSiguiente" onclick="imagenSiguiente()">-></button>
+              <button class="boton boton-anterior" onclick="imagenAnterior()"><-</button>
+
+          </article>
+
+      </section>
+      <audio id="audio" src="./Recursos/dice.mp3"></audio>
+      <audio id="audio2" src="./Recursos/descuento.mp3"></audio>
+      <div id="ventanaEmergente" class="ventanaOculta">
+        <div class="ventanaCentrada">
+            <p id="tirando"> Tirando dado...</p>
+        </div>
+    </div>
+      </main>
+
+
+      <!-- Inicio footer -->
+      <footer>
+          <div class="contenedor__footer">
+              <section class="columna__footer">
+                  <img class="logo__footer"
+                       src="./Recursos/Imagenes/logo_pequeño_nobg.png"
+                       alt="Logo pequeño de la web." />
+
+                  <p id="titulo_footer">Airsoft Mallorca</p>
+              </section>
+              <section class="columna__footer">
+                  <h3>
+                      Contacto
+                      <div class="decoracion__footer--titulo"><span></span></div>
+                  </h3>
+                  <p>Carrer de Caracas, 6, 07007 Palma, Illes Balears</p>
+                  <p>Telèfon: 971 27 81 50</p>
+              </section>
+              <aside class="columna__footer">
+                  <h3>
+                      Enlaces
+                  </h3>
+                  <div class="decoracion__footer--titulo"><span></span></div>
+
+                  <i class="fab fa-github"></i>
+                  <i class="fab fa-linkedin-in"></i>
+                  <i class="fab fa-css3"></i>
+                  <i class="fab fa-cc-paypal"></i>
+              </aside>
+              <section class="columna__footer" id="contenedor_marcas">
+                  <h3>
+                      Marcas colaboradoras
+                      <div class="decoracion__footer--titulo"><span></span></div>
+                  </h3>
+
+
+
+                  <figure>
+                      <i class="fab fa-apple"></i>
+                  </figure>
+                  <figure>
+                      <i class="fab fa-java"></i>
+                  </figure>
+                  <figure>
+                      <i class="fab fa-cc-paypal"></i>
+                  </figure>
+              </section>
+          </div>
+          <hr />
+          <div class="footer_color">
+              <p class="texto_fin_footer">Alejandro Carpio</p>
+              <p class="texto_fin_footer"> Antonio David</p>
+              <p class="texto_fin_footer"> Práctica LLM Noviembre/Diciembre</p>
+          </div>
+      </footer>
+      <script src="./Scripts/tema.js"></script>
+      <script src="./Scripts/imagenes.js"></script>
+      <script src="./Scripts/CargaDinamica.js"></script>
+      <script src="./Scripts/dado.js"></script>
+  </body>
+</html>

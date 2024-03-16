@@ -1,0 +1,284 @@
+    /* Reglas generales*/
+
+    body article {
+        margin: 2%;
+    }
+
+
+    h1, h2, h3, h4, h5 {
+        font-family: Oxanium;
+        text-align: center;
+    }
+
+    /*Inicio reglas banner*/
+
+    .nosotros__inicio--banner {
+        height: 600px;
+        width: 95%;
+        margin: 40px auto;
+        display: flex;
+    }
+
+    .banner__animado--imagen {
+        width: 80px;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        transition: flex .5s;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        --mensaje: "Airsoft Mallorca: Conócenos";
+        --mensaje-clip: circle(0 at center);
+        --mensaje-transition: clip-path .2s;
+    }
+
+    .banner__animado--imagen::before {
+        content: var(--mensaje);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e5e0e0a3;
+        color:  #102441;
+        clip-path: var(--mensaje-clip);
+        transition: var(--mensaje-transition);
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-family: Saira Stencil One;
+    }
+
+    .banner__animado--imagen:hover {
+        flex: 6;
+        --mensaje-clip: circle(100% at center);
+        --mensaje-transition: clip-path .4s .5s;
+    }
+
+    .banner__animado--imagen:nth-child(1) {
+        background-image: url('../Recursos/Imagenes/Imagenes_Nosotros/nosotros1.webp')
+    }
+    .banner__animado--imagen:nth-child(2) {
+        background-image: url('../Recursos/Imagenes/Imagenes_Nosotros/nosotros2.jpg')
+    }
+    .banner__animado--imagen:nth-child(3) {
+        background-image: url('../Recursos/Imagenes/Imagenes_Nosotros/conocenos3.jpeg')
+    }
+
+    /* Fin banner animado. */
+
+    /* Inicio cuerpo de la página*/
+
+    .contenedor__aboutus {
+        display: flex;
+        margin-top: 10%;
+        margin-bottom: 3%;
+        background-color: blanchedalmond;
+        column-gap: 5%;
+        padding: 10px;
+
+
+    }
+
+
+
+    .contenedor__conocenos {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+
+    /* Videos */
+
+    .video_contenedor {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+  
+  .video_contenedor {
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+}
+
+.video {
+    width: 30%;
+    object-fit: cover;
+    margin: 10px;
+}
+
+/*Fin videos*/
+
+/*Tarjetas */
+.boton_expandir{
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+/*Contenedor padre de tarjetas.*/
+.fila_tarjetas {
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/*Como fila_tarjetas es el contenedor padre, .tarjeta es a la vez item y contenedor de los items de dentro de la propia tarjeta. Como el cuerpo, el inicio y la cabecera y el botón.*/
+.tarjeta {
+    flex: 1 0 calc(25% - 20px);
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta_inicio {
+    text-align: center;
+    padding: 10px 5px;
+}
+
+.imagen_tarjeta_inicio {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.tarjeta_cuerpo {
+    padding: 20px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tarjeta_cuerpo .boton_tarjeta {
+    display: block;
+    background: gray;
+    border: 0;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer; 
+    margin-top: 30px;
+}
+
+/*Animación con hover para las tarjetas.*/
+
+.tarjeta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px -10px rgba(0,0,0, 0.25);
+}
+
+.contenedor_tarjetas {
+    box-sizing: border-box;
+    width: 90%;
+    margin: 50px auto;
+}
+
+.cabecera_tarjetas {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+
+/*Fin tarjetas*/
+
+
+
+/*Modificaciones y ajustes individuales */
+
+.mapa { /*El iframe del mapa se comporta un poco raro con el texto que tiene encima, así que lo pongo como elemento en bloque y que simplemente este debajo.*/
+    display: block;
+    text-align: center;
+}
+
+.contenedor__conocenos {
+    display: block;
+}
+
+/*Fin modificaciones y ajustes individuales*/
+
+@media (max-width: 500px) {
+    .banner__animado--imagen {
+        width: 100%;
+        height: auto;
+    }
+    .video_contenedor {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: hidden; 
+        overflow-y: hidden; 
+    }
+
+    /* Cambia en moviles como se ven los videos para que no haya barra de scroll. */
+
+    .video_contenedor {
+        flex-direction: column;
+    }
+    .video {
+        width: 100%;
+    }
+
+    /* Hace que las tarjetas se apilen verticalmente */
+    .fila_tarjetas {
+        flex-direction: column;
+    }
+    .tarjeta {
+        flex-basis: 100%;
+    }
+}
+
+
+/* Estilos para pantallas con un ancho de 600px o menos */
+@media (max-width: 600px) {
+    .banner__animado--imagen {
+        width: 100%;
+        height: auto;
+    }
+
+     /* Elimina la barra de scroll de los videos. */
+    .video_contenedor {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: hidden; 
+        overflow-y: hidden; 
+    }
+
+}
+
+/* Estilos para pantallas con un ancho de 768px o menos */
+@media (max-width: 768px) {
+    .banner__animado--imagen {
+        width: 100%;
+        height: auto;
+    }
+    .banner__animado--imagen:hover {
+        flex: none;
+        --mensaje-clip: none;
+        --mensaje-transition: none;
+    }
+
+
+    .video_contenedor {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: hidden; 
+        overflow-y: hidden; 
+    }
+}
+
+@media (min-width: 769px) {
+    .formatotexto {
+        font-size: 18px;
+        line-height: 1.6; 
+        text-align: justify; 
+    }
+}

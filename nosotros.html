@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link rel="stylesheet" href="./Estilos/estilos.css" />
+    <link rel="stylesheet" href="./Estilos/nosotros_estilos.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/344a6c6bab.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Inicio banner -->
+
+    <header class="header">
+      <nav class="nav">
+        <a href="#rellenar" class="nav__logo">
+          <img
+            src="./Recursos/Imagenes/logo_pequeño_nobg.png "
+            alt="Logo de la página web."
+            width="50"
+            height="auto"
+          />
+          <div>Airsoft Mallorca</div>
+        </a>
+
+        <a href="#menu" class="nav__menu--abrir">
+          <img src="Recursos/Imagenes/menu_movil_abrir.svg" alt="Abrir menú." />
+        </a>
+
+        <ul id="menu" class="nav__menu">
+          <a href="#" class="nav__menu--cerrar">
+            <img
+              src="Recursos/Imagenes/menu_movil_cerrar.svg"
+              alt="Cerrar menú."
+            />
+          </a>
+          <li><a href="indice.html">Inicio</a></li>
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a onclick="temaOscuroContraste()" id="botontema">Tema</a></li>
+          <li class="icono"><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+          <li class="icono"><a href="#"><i class="fas fa-heart"></i></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="nosotros__inicio--banner">
+      <div class="banner__animado--imagen"></div>
+      <div class="banner__animado--imagen"></div>
+      <div class="banner__animado--imagen"></div>
+    </section>
+
+    <!-- Fin banner -->
+    <div class="formatotexto">
+    <article>
+      <h2>¿Quienes somos?</h2>
+      <p>
+        Somos una empresa dedicada a la venta de <span class="acentuar">productos de alta calidad.</span> Nuestro objetivo es ofrecer a nuestros clientes una experiencia de compra excepcional, con un servicio al cliente inigualable y productos que superen sus expectativas.
+      </p>
+
+      <section class="contenedor__aboutus" id="parrafoEspecial">
+        <section class="columna_aboutus" >
+          Nuestro equipo está compuesto por profesionales altamente capacitados que se esfuerzan por ir más allá de lo esperado para brindar el mejor servicio posible.
+        </section>
+
+        <section class="columna_aboutus">
+          En realidad esto es un trabajo hecho para la asignatura de Lenguaje de Marcas y gestión de la información, del grado superior 1º de Desarrollo de Aplicaciones Multiplataforma.
+        </section>
+      </section>
+
+      <h2 id="juega">Juega con nosotros</h2>
+
+      <section class="contenedor__conocenos">
+        <p>
+          Si quieres jugar con nosotros puedes encontrarnos en esta dirección, simplemente utiliza el mapa y encontrarás las mejores partidas. (La dirección es ficticia, por eso lleva a la catedral de palma.)
+          
+        </p>
+        <div class="mapa">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24605.75751544457!2d2.6362903687474497!3d39.56592763166529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129792457daf8f55%3A0x540c9be89afd81aa!2sCatedral%20de%20Mallorca!5e0!3m2!1sca!2ses!4v1701103913617!5m2!1sca!2ses"
+            width="400"
+            height="200"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+
+      <!-- Inicio videos. -->
+
+      <h2>Nuestras instalaciones</h2>
+
+      <section>
+        Tenemos instalaciones tanto indoor como outdoor para que puedas jugar tus partidas de airsoft con tus amigos. ¿Quieres conocernos? Pásate cuando quieras y conócenos. Organizamos partidas para grupos, fiestas, e incluso partidas con la gente de la comunidad. No te las pierdas.
+
+        <div class="video_contenedor">
+          <video
+            src="./Recursos/Videos/video_nosotros1.mp4"
+            class="video"
+            alt="Video de nuestras instalaciones."
+            muted
+            loop
+            autoplay
+          ></video>
+          <video
+            src="./Recursos/Videos/video_nosotros2.mp4"
+            class="video"
+            alt="Segundo video de nuestras instalaciones."
+            muted
+            loop
+            autoplay
+          ></video>
+          <video
+            src="./Recursos/Videos/video_nosotros3.mp4"
+            class="video"
+            alt="Tercer video de nuestras instalaciones."
+            muted
+            loop
+            autoplay
+          ></video>
+        </div>
+      </section>
+    </article>
+  </div>
+
+    <!-- Inicio tarjetas -->
+
+    <div class="contenedor_tarjetas">
+      <div class="cabecera_tarjetas">
+        <h2>¿Quieres saber más?</h2>
+      </div>
+      <div class="fila_tarjetas">
+        <div class="tarjeta">
+          <div class="tarjeta_inicio">
+            <img
+              src="./Recursos/Imagenes/Imagenes_Nosotros/tarjeta1.jpg"
+              alt="Réplica de airsoft."
+              class="imagen_tarjeta_inicio"
+            />
+          </div>
+          <div class="tarjeta_cuerpo">
+            <h4>Sobre el airsoft</h4>
+            <p>
+              El airsoft es una actividad física, lúdica y recreativa, basada en el cumplimiento de objetivos a través de estrategias para así descontar jugadores del equipo contrario o cumplir con un límite de tiempo requerido; se practica principalmente en dos tipos de escenarios: en campos abiertos para jugar largas distancias o a cortas distancias dentro de edificios, naves abandonadas o recintos para jugar C.Q.B.
+            </p>
+            <a href="https://es.wikipedia.org/wiki/Airsoft">
+            <button class="boton_tarjeta">Saber más</button>
+            </a>
+          </div>
+        </div>
+        <div class="tarjeta">
+          <div class="tarjeta_inicio">
+            <img id="tarjeta2"
+              src="./Recursos/Imagenes/Imagenes_Nosotros/tarjeta2.jpg"
+              alt="Arma de juguete."
+              class="imagen_tarjeta_inicio"
+            />
+          </div>
+          <div class="tarjeta_cuerpo">
+            <h4>Sobre las réplicas</h4>
+            <p>
+              Las armas de airsoft son armas de juguete, réplicas de armas reales utilizadas en el deporte denominado airsoft. Son un tipo especial de armas de aire comprimido de ánima lisa de muy baja potencia, diseñadas para disparar proyectiles esféricos no metálicos, a menudo coloquialmente (pero incorrectamente) denominados "BB", que generalmente están fabricados a base de materiales plásticos o de resinas biodegradables.
+            </p>
+            <a href="https://es.wikipedia.org/wiki/Arma_de_airsoft">
+            <button class="boton_tarjeta">Saber más</button>
+            </a>
+          </div>
+        </div>
+        <div class="tarjeta">
+          <div class="tarjeta_inicio">
+            <img
+              src="./Recursos/Imagenes/Imagenes_Nosotros/tarjera3.jpg"
+              alt="Dibujo de un programador."
+              class="imagen_tarjeta_inicio"
+            />
+          </div>
+          <div class="tarjeta_cuerpo">
+            <h4>Sobre nosotros</h4>
+            <p>
+              Página web hecha por Alex y Antonio para la última práctica de la asignatura LLM.
+
+
+            </p>
+            <button id="tercer_boton"class="boton_tarjeta"> Saber más</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fin tarjetas -->
+
+    <!-- Inicio footer -->
+    <footer>
+      <div class="contenedor__footer">
+        <section class="columna__footer">
+          <img
+            class="logo__footer"
+            src="./Recursos/Imagenes/logo_pequeño_nobg.png"
+            alt="Logo de la página web versión pequeña."
+          />
+
+          <p id="titulo_footer">Airsoft Mallorca</p>
+        </section>
+        <section class="columna__footer">
+          <h3>
+            Contacto
+            <div class="decoracion__footer--titulo"><span></span></div>
+          </h3>
+          <p>Carrer de Caracas, 6, 07007 Palma, Illes Balears</p>
+          <p>Telèfon: 971 27 81 50</p>
+        </section>
+        <aside class="columna__footer">
+          <h3>
+            Enlaces
+          </h3>
+            <div class="decoracion__footer--titulo"><span></span></div>
+         
+          <i class="fab fa-github"></i>
+          <i class="fab fa-linkedin-in"></i>
+          <i class="fab fa-css3"></i>
+          <i class="fab fa-cc-paypal"></i>
+        </aside>
+        <section class="columna__footer" id="contenedor_marcas">
+          <h3>
+            Marcas colaboradoras
+            <div class="decoracion__footer--titulo"><span></span></div>
+          </h3>
+
+
+
+          <figure>
+            <i class="fab fa-apple"></i>
+          </figure>
+          <figure>
+            <i class="fab fa-java"></i>
+          </figure>
+          <figure>
+            <i class="fab fa-cc-paypal"></i>
+          </figure>
+        </section>
+      </div>
+      <hr />
+      <div class="footer_color">
+        <p class="texto_fin_footer">Alejandro Carpio</p>
+        <p class="texto_fin_footer"> Antonio David</p>
+        <p class="texto_fin_footer"> Práctica LLM Noviembre/Diciembre</p>
+      </div>
+    </footer>
+
+    <script src="./Scripts/tema.js"></script>
+    <script src="./Scripts/CargaDinamica.js"></script>
+  </body>
+</html>
