@@ -22,6 +22,20 @@ Alejandro Carpio
 
 LLM - 2ºn Trimestre - Página responsive con Javascript
 
+## Interactividad de la página
+
+De una práctica a otra la página ha ganado mucho en interactividad.
+
+Todas las páginas tienen un botón para cambiar el tema, de modo claro a modo oscuro y viceversa.
+
+En la página de la tienda, hay un carrusel de imagenes con botones para navegar entre las imagenes, y en cada producto se puede hacer click para desplegar una galería que muestra la foto del producto a pantalla completa y información adicional.
+
+Hay ventanas emergentes que te dan información sobre los términos y condiciones, las cookies, o unas notificaciones que salen de la campana que te dan información sobre la página, esta información se guarda en local storage para que no vuelva a salir al recargar la página.
+
+En la página de contacto hay varios formularios responsive, en el formulario grande si se completa todo y se valida bien, se añade el comentario de forma dinámica a la página. Abajo del todo hay un botón para enviar una valoración a través de un popup emergente, que permite seleccionar una valoración de 1 a 5 estrellas y enviar un comentario por correo al administrador de la página.
+
+
+
 # División del trabajo
 
 Al ser una práctica más enfocada a los scripts, nos hemos dividido más o menos el trabajo a la mitad, aunque al final hemos terminado haciendo los dos un poco de todo.
