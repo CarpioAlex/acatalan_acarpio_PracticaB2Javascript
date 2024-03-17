@@ -98,7 +98,7 @@ El script CargaDinamica contiene dos funciones principales: `expandirContraerTar
 
 ### Función  tarjetas interactivas
 La primera gestiona la visualización de contenido en tarjetas interactivas, permitiendo a los usuarios expandir o contraer la información. 
-![expandirContraerTarjetas](./acatalan_acarpio_b2responsive-main/Documentacion/expandirContraerTarjetas.gif)
+![expandirContraerTarjetas](./Documentacion/expandirContraerTarjetas.gif)
 ### Función términos y condiciones
 La segunda función crea un pop-up con términos y condiciones que los usuarios pueden aceptar o cancelar; si se aceptan, el pop-up se oculta y la aceptación se guarda en el almacenamiento local. 
 ![mostrarOcultarPopup](./Documentacion/mostrarOcultarPopup.gif)
