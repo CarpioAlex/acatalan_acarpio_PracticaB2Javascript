@@ -121,7 +121,7 @@ Implementamos un sistema de notificaciones emergentes para informar a los usuari
 
 ### Notificación de Cookies
 
-CAMBIAR -- Además, implementamos una notificación de cookies que informa a los usuarios sobre nuestra política de cookies y obtiene su consentimiento. Esta notificación solo se muestra una vez y se oculta permanentemente una vez que el usuario interactúa con ella.
+Esta notificación solo se muestra una vez y se oculta permanentemente una vez que el usuario la cierra.
 ![Cookies-Banner](./Documentacion/Cookies-Banner.png)
 
 #### Cómo Funciona
